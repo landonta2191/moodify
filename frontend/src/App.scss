@@ -1,0 +1,318 @@
+@import url('https://fonts.googleapis.com/css?family=Poppins:300,400,600,700');
+//Typography
+html, body {
+  font-family: 'Poppins', sans-serif;
+}
+
+h1 {
+  font-size: 4em;
+}
+
+body{
+  background-color: white;
+}
+
+// Animation
+@keyframes pulse {
+  0% {
+    background-color: #e62149;
+  }
+  100% {
+    background-color: black;
+}
+}
+
+@mixin animation {
+  animation: pulse 2s 1;
+}
+
+//Upload
+.upload {
+  background-image: url("https://media.giphy.com/media/TKNAEfavYhmOQ/giphy.gif");
+  position: relative;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  h1{
+    color: white;
+  }
+  form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    input {
+      width: 76vw;
+      padding: 2em;
+      font-size: 1em;
+      color: black;
+      text-align: center;
+      border-radius: 16px;
+      // border: 2px solid grey;
+      border: none;
+    }
+    button {
+      border: none;
+      width: 198px;
+      height: 55px;
+      background-color: black;
+      color: white;
+      border-radius: 4px;
+      margin: 2.5em 1em 2.5em 1em;
+      font-size: 2em;
+      font-weight: bold;
+      &:hover {
+      @include animation();      
+    }
+    }
+  }
+}
+
+
+//Landing Page
+
+.landing-page {
+  // border: 1px solid red;
+  background-image: url("https://avatars.mds.yandex.net/get-pdb/754739/1d4d4cd2-23c1-4e5f-94f1-e9dba6cb61d7/orig");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+  position: relative;
+  color: white;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  h1{
+  font-size: 6em;
+  margin: 0;
+  }
+}
+
+.explore {
+  font-size: 1.5em;
+  color: white;
+  margin-top: 1em;
+  border: 2px solid white;
+  text-decoration: none;
+  padding: 0em 1em;
+  &:hover {
+    @include animation();
+  }
+}
+
+//Intro
+.intro {
+  height: 60vh;
+    background-color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* flex-direction: column; */
+
+  .spotify {
+    width: 12em;
+    border-left: 4px solid black;
+    padding-left: 7em;
+
+  }
+  .microsoft {
+    width: 12em;
+    padding-right: 7em;
+  }
+  img {
+    padding: 1em;
+  }
+}
+
+//HOW 
+.how {
+    display: flex;
+    flex-direction: column;
+    color: white;
+    justify-content: center;
+    align-items: center;
+    height: 60vh;
+    background-image: url("https://avatars.mds.yandex.net/get-pdb/754739/62cb13ec-c0af-4b71-931f-32b3ad4bcf68/orig");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    position: relative;
+    h2 {
+      margin-top: -1em;
+    }
+  }
+   
+  //Howafter
+  .howafter {
+    height: 60vh;
+    img {
+      width: 50%;
+      height: 100%;
+    }
+  }
+
+  //Player
+.player{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  .overplay {
+    position: relative;
+    display: inline-block;
+    cursor: pointer;
+    margin-right: 6em;
+    .playbutton {
+      position: absolute;
+      width: 29%;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+    }
+    .mainimage {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 350px;
+    height: 350px;
+    margin-bottom: 2em;
+      
+    }
+    .stats {
+    display: flex;
+    justify-content: space-evenly;
+    }
+  }
+  .playpage {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 3em;
+    iframe {
+      width: 48vw;
+    }
+    h1 {
+      text-align: center;
+    }
+  }
+}
+
+//OPTIONS
+.video {
+    display: flex;
+    justify-content: space-evenly;
+    // border: 1px solid red;
+    height: 100vh;
+    align-items: center;
+  .leftside {
+    width: 50%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: white;
+    transform: matrix(1, 0, 0, 1, 0, 0);
+    transition: background-color 1.4s;
+    &:hover {
+        background-color: #2E3C36;
+    }
+    .linkvideo{
+      text-decoration: none;
+    }
+    .left {
+      border: 9px solid black;
+      padding: 0.5em;
+      width: 240px;
+      height: 240px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center; 
+      justify-content: center; 
+      transition: color .4s cubic-bezier(.7,0,.3,1);
+      position: relative;
+      font-size: 32px;
+      text-transform: uppercase;
+      color: black;
+      text-align: center;
+      line-height: 1.1;
+      padding: 18px;
+      z-index: 1;
+      &:hover {
+        color: white;
+        border: 9px solid white;
+      }
+    }
+  }
+  .rightside {
+    width: 50%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: white;
+    transform: matrix(1, 0, 0, 1, 0, 0);
+    transition: background-color 1.4s;
+
+    &:hover {
+        background-color: #c02e4c;
+    }
+    .linkupload{
+      text-decoration: none;
+    }
+    .right {
+      border: 9px solid black;
+      padding: 0.5em;
+      width: 240px;
+      height: 240px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      -webkit-transition: color 0.4s cubic-bezier(0.7, 0, 0.3, 1);
+      transition: color 0.4s cubic-bezier(0.7, 0, 0.3, 1);
+      position: relative;
+      font-size: 32px;
+      text-transform: uppercase;
+      color: black;
+      text-align: center;
+      line-height: 1.1;
+      padding: 18px;
+      z-index: 1;
+      &:hover {
+        color: white;
+        border: 9px solid white;
+      }
+    }
+  }
+}
+
+//Footer 
+.footer {
+    background-image: url("http://anchor.themeshop.co/wp-content/uploads/2018/11/hero1.jpg");
+    height: 60vh;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+
+  h1 {
+    text-align: center;
+    font-size: 2em;
+    color: white;
+  }
+}
